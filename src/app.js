@@ -39,11 +39,11 @@ app.configure(express.rest());
 app.configure(socketio());
 
 app.configure(sync({
-  uri: "amqp://guest:guest@127.0.0.1:5672?heartbeat=10"
+  uri: "amqp://test:test@127.0.0.1:5672?heartbeat=10"
 }));
 app.configure(amqpEvents({
   amqp: {
-    "url": "amqp://guest:guest@127.0.0.1:5672?heartbeat=10",
+    "url": "amqp://test:test@127.0.0.1:5672?heartbeat=10",
     "exchange": "contact"
   },
   original: true
